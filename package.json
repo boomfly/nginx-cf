@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "docker build -t boomfly/nginx-cf .",
+    "tag": "docker tag boomfly/nginx-cf boomfly/nginx-cf:latest",
     "push": "docker push boomfly/nginx-cf:latest",
+    "push-dev": "docker tag boomfly/nginx-cf boomfly/nginx-cf:development && docker push boomfly/nginx-cf:development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
